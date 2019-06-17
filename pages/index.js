@@ -1,14 +1,15 @@
-import Head from 'next/head'
-import { useAmp } from 'next/amp'
-import Layout from '../components/Layout'
-import Byline from '../components/Byline'
+import React from 'react';
+import Head from 'next/head';
+import { useAmp } from 'next/amp';
+import Layout from '../components/Layout';
+import Byline from '../components/Byline';
 
 export const config = {
-  amp: true
-}
+  amp: true,
+};
 
 export default () => {
-  const isAmp = useAmp()
+  const isAmp = useAmp();
 
   return (
     <Layout>
@@ -16,8 +17,8 @@ export default () => {
         <title>The Cat</title>
       </Head>
       <h1>The Cat (AMP-first Page)</h1>
-      <Byline author='Dan Zajdband' />
-      <p className='caption'>Meowwwwwwww</p>
+      <Byline author="Dan Zajdband" />
+      <p className="caption">Meowwwwwwww</p>
       <p>
         Cat ipsum dolor <a href={isAmp ? '/dog?amp=1' : '/dog'}>sit amet</a>,
         eat grass, throw it back up but refuse to leave cardboard box or groom
@@ -217,5 +218,5 @@ export default () => {
         }
       `}</style>
     </Layout>
-  )
-}
+  );
+};

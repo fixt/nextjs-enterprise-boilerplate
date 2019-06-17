@@ -1,6 +1,8 @@
+import React from 'react';
+
 export default ({ author }) => (
   <>
-    <div className='byline'>By {author}</div>
+    <div className="byline">By {author}</div>
     <style jsx>{`
       .byline {
         color: green;
@@ -8,4 +10,4 @@ export default ({ author }) => (
       }
     `}</style>
   </>
-)
+);

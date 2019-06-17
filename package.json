@@ -1,15 +1,63 @@
 {
   "name": "amp",
   "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start -p $PORT"
+    "build:analyze": "BUNDLE_ANALYZE=both yarn next build",
+    "build:css": "cd semantic-ui && yarn gulp build",
+    "build:storybook": "build-storybook",
+    "build": "next build && yarn build:css",
+    "dev:css": "cd semantic-ui && gulp watch",
+    "dev": "nodemon --exec babel-node server",
+    "heroku-bd": "heroku container:push web && heroku container:release web",
+    "lint:js": "eslint . --ext .js --fix",
+    "lint:styles": "stylelint 'src/**/*.scss' --fix ",
+    "lint:semantic": "stylelint 'semantic-ui/src/site/**/*' --syntax less --fix",
+    "lint": "yarn lint:js && yarn lint:styles && yarn lint:semantic",
+    "postinstall": "cd semantic-ui && yarn install",
+    "start": "cross-env NODE_ENV=production node server",
+    "storybook": "yarn buildstorybook && start-storybook -p 6006",
+    "clean": "rm -rf yarn.lock */yarn.lock node_modules/* semantic-ui/node_modules/* semantic-ui/dist .next"
+  },
+  "engines": {
+    "node": "10.x"
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "cluster": "^0.7.7",
+    "compression": "^1.7.4",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-redirect": "^1.2.2",
+    "helmet": "^3.18.0",
+    "hpp": "^0.2.2",
+    "morgan": "^1.9.1",
     "next": "canary",
+    "nocache": "^2.1.0",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "url": "^0.11.0"
   },
-  "license": "ISC"
+  "devDependencies": {
+    "@zeit/next-bundle-analyzer": "^0.1.2",
+    "@zeit/next-sass": "^1.0.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "eslint": "^5.16.0",
+    "eslint-config-fixt": "git+https://github.com/fixt/eslint-config-fixt.git#v1.2.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "next-compose-plugins": "^2.2.0",
+    "next-images": "^1.1.2",
+    "next-size": "^2.0.2",
+    "nodemon": "^1.19.1",
+    "stylelint": "^10.0.0",
+    "stylelint-a11y": "^1.1.11",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.0",
+    "stylelint-scss": "^3.6.1"
+  }
 }

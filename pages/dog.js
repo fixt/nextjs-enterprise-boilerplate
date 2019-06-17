@@ -1,14 +1,14 @@
-import Head from 'next/head'
-import { useAmp } from 'next/amp'
-import Byline from '../components/Byline'
+import React from 'react';
+import Head from 'next/head';
+import { useAmp } from 'next/amp';
+import Byline from '../components/Byline';
 
 export const config = {
-  amp: 'hybrid'
-}
+  amp: 'hybrid',
+};
 
 export default () => {
-  const isAmp = useAmp()
-  console.log(isAmp);
+  const isAmp = useAmp();
 
   return (
     <div>
@@ -16,13 +16,13 @@ export default () => {
         <title>The Dog</title>
       </Head>
       <h1>The Dog (Hybrid AMP Page)</h1>
-      <Byline author='Meow Meow Fuzzyface' />
+      <Byline author="Meow Meow Fuzzyface" />
       <p>
         <a href={isAmp ? '/dog' : '/dog?amp=1'}>
           {isAmp ? 'View Non-AMP' : 'View AMP'} Version
         </a>
       </p>
-      <p className='caption'>Woooooooooooof</p>
+      <p className="caption">Woooooooooooof</p>
       <p>
         Wafer donut candy soufflé{' '}
         <a href={isAmp ? '/?amp=1' : '/'}>lemon drops</a> icing. Marzipan gummi
@@ -91,5 +91,5 @@ export default () => {
         tiramisu.
       </p>
     </div>
-  )
-}
+  );
+};
