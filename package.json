@@ -35,6 +35,7 @@
     "express-redirect": "^1.2.2",
     "helmet": "^3.18.0",
     "hpp": "^0.2.2",
+    "logrocket": "^1.0.0",
     "morgan": "^1.9.1",
     "next": "canary",
     "nocache": "^2.1.0",

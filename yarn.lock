@@ -4672,6 +4672,11 @@ log-symbols@^3.0.0:
     sprintf-kit "^2.0.0"
     type "^1.0.1"
 
+logrocket@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.0.0.tgz#978238fa621702e963c86644006c9b4580eaf4f2"
+  integrity sha512-Y7xtbfuK9Ixpk63m3DvzcUNa5LTe82dqaf/vhlxFOgZCSFld8uxYrxqn59zd7v87FmD5SLa9VrMArli+h/YNCg==
+
 longest-streak@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/longest-streak/-/longest-streak-2.0.3.tgz#3de7a3f47ee18e9074ded8575b5c091f5d0a4105"

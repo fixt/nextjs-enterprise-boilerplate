@@ -3,6 +3,9 @@ import Head from 'next/head';
 import { useAmp } from 'next/amp';
 import Byline from '../components/Byline';
 
+import LogRocket from 'logrocket';
+LogRocket.init('ouoefb/amp');
+
 export const config = {
   amp: 'hybrid',
 };
