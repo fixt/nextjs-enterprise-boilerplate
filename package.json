@@ -24,10 +24,12 @@
     "node": "10.x"
   },
   "dependencies": {
+    "@yolkai/next-routes": "^3.0.0",
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "cluster": "^0.7.7",
     "compression": "^1.7.4",
+    "cross-env": "^5.2.0",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-redirect": "^1.2.2",
@@ -41,6 +43,7 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
+    "@babel/node": "^7.4.5",
     "@zeit/next-bundle-analyzer": "^0.1.2",
     "@zeit/next-sass": "^1.0.1",
     "babel-plugin-transform-remove-console": "^6.9.4",
