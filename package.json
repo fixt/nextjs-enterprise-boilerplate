@@ -50,7 +50,7 @@
     "babel-plugin-transform-remove-console": "^6.9.4",
     "eslint": "^5.16.0",
     "eslint-config-fixt": "git+https://github.com/fixt/eslint-config-fixt.git#v1.2.0",
-    "eslint-config-prettier": "^4.2.0",
+    "eslint-config-prettier": "^5.0.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
