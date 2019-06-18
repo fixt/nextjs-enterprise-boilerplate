@@ -3,7 +3,7 @@ import { useAmp, withAmp } from 'next/amp';
 
 import Byline from '../../components/Byline';
 import Layout from '../../components/common/Layout';
-// import AMP_Layout from '../../amp-components/common/Layout';
+import CustomLink from '../../components/common/CustomLink';
 
 export const config = {
   amp: 'hybrid',
@@ -17,24 +17,25 @@ const Dog = props => {
       <h1>The Dog (Hybrid AMP Page)</h1>
       <Byline author="Meow Meow Fuzzyface" />
       <p>
-        <a href={isAmp ? '/amp/dog' : '/amp/dog?amp=1'}>
+        <a href={isAmp ? '/amp/hybrid' : '/amp/hybrid?amp=1'}>
           {isAmp ? 'View Non-AMP' : 'View AMP'} Version
         </a>
       </p>
       <p className="caption">Woooooooooooof</p>
+      <CustomLink href="/amp/always">boble</CustomLink>
       <p>
         Wafer donut candy soufflé{' '}
-        <a href={isAmp ? '/amp?amp=1' : '/amp'}>lemon drops</a> icing. Marzipan
-        gummi bears pie danish lollipop pudding powder gummi bears sweet. Pie
-        sweet roll sweet roll topping chocolate bar dragée pudding chocolate
-        cake. Croissant sweet chocolate bar cheesecake candy canes. Tootsie roll
-        icing macaroon bonbon cupcake apple pie candy canes biscuit candy canes.
-        Jujubes jelly liquorice toffee gingerbread. Candy tootsie roll macaroon
-        chocolate bar icing sugar plum pie. Icing gummies chocolate bar
-        chocolate marzipan bonbon cookie chocolate tart. Caramels danish halvah
-        croissant. Cheesecake cookie tootsie roll ice cream. Powder dessert
-        carrot cake muffin tiramisu lemon drops liquorice topping brownie.
-        Soufflé chocolate cake croissant cupcake jelly.
+        <a href={isAmp ? '/amp/always?amp=1' : '/amp/always'}>lemon drops</a>{' '}
+        icing. Marzipan gummi bears pie danish lollipop pudding powder gummi
+        bears sweet. Pie sweet roll sweet roll topping chocolate bar dragée
+        pudding chocolate cake. Croissant sweet chocolate bar cheesecake candy
+        canes. Tootsie roll icing macaroon bonbon cupcake apple pie candy canes
+        biscuit candy canes. Jujubes jelly liquorice toffee gingerbread. Candy
+        tootsie roll macaroon chocolate bar icing sugar plum pie. Icing gummies
+        chocolate bar chocolate marzipan bonbon cookie chocolate tart. Caramels
+        danish halvah croissant. Cheesecake cookie tootsie roll ice cream.
+        Powder dessert carrot cake muffin tiramisu lemon drops liquorice topping
+        brownie. Soufflé chocolate cake croissant cupcake jelly.
       </p>
       <p>
         Muffin gummies dessert cheesecake candy canes. Candy canes danish cotton
