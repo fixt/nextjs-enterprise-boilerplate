@@ -12,7 +12,7 @@ const morgan = require('morgan');
 const nocache = require('nocache');
 require('dotenv').config();
 
-// const apiRoutes = require('./api');
+const apiRoutes = require('./api');
 const routes = require('./routes');
 
 const { NODE_ENV } = process.env;
@@ -135,7 +135,7 @@ if (!dev && cluster.isMaster) {
       .use('/static', express.static('static'));
 
     // Server routing
-    // server.use('/api', apiRoutes).use(nextHandler);
+    server.use('/api', apiRoutes).use(nextHandler);
 
     // Default catch-all renders Next app
     server.get('*', (req, res) => {

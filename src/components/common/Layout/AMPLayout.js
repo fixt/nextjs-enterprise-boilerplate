@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 class AMPLayout extends PureComponent {
   render() {
     const { title, children } = this.props;
-    const segmentKey = '{"vars": {"writeKey": "AMP_WRITE_KEY","name": "My Page Name"}}';
+    const segmentKey =
+      '{"vars": {"writeKey": "AMP_WRITE_KEY","name": "My Page Name"}}';
 
     return (
       <Fragment>

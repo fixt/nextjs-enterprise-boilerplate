@@ -16,6 +16,10 @@ require('dotenv').config();
 // Variables exposed at build-time
 const nextConfig = {
   env: {
+    algolia: {
+      apiKey: process.env.ALGOLIA_API_KEY,
+      appId: process.env.ALGOLIA_APP_ID,
+    },
     nodeEnv: process.env.NODE_ENV,
     segmentAnalyticsWriteKey: process.env.SEGMENT_ANALYTICS_WRITE_KEY,
     sentryDSN: process.env.SENTRY_DSN,

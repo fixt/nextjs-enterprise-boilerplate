@@ -10,10 +10,17 @@ const nextRoutes = require('@yolkai/next-routes').default;
  * .add({name: 'beta', pattern: '/v3', page: 'v3'})  // beta   v3        /v3
  */
 const routes = nextRoutes() // ----   ----      -----
-  .add({
-    name: 'details',
-    page: '/requests/details',
-    pattern: '/requests/details/:id',
-  });
+  // Taxonomy archives
+  .add('brandList', '/brands', 'taxonomy/archive')
+  .add('castList', '/cast', 'examples/algolia/many')
+  .add('filmList', '/films', 'taxonomy/archive')
+  .add('parks', '/parks', 'taxonomy/archive')
 
+  // Tax term
+  .add('brand', '/brand/:id', 'taxonomy/term') // http://localhost:4000/brand/ethan-allen
+  .add('cast', '/cast/:id', 'taxonomy/term') // http://localhost:4000/cast/ariel
+  .add('collection', '/collection/:id', 'taxonomy/term') // http://localhost:4000/cast/ariel
+  .add('film', '/films/:id', 'taxonomy/term') // http://localhost:4000/film/275
+  .add('sold-by', '/sold-by/:id', 'taxonomy/term') //
+  .add('tag', '/tags/:id', 'taxonomy/term'); //
 module.exports = routes;
