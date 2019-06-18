@@ -2,13 +2,17 @@
 // Event handlers like onClick can't be added to this file
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import LogRocket from 'logrocket';
 import * as snippet from '@segment/snippet';
 import * as Sentry from '@sentry/browser';
 
+// LogRocket
+LogRocket.init('ouoefb/amp');
+
+// Sentry alerting
 process.on('unhandledRejection', err => {
   Sentry.captureException(err);
 });
-
 process.on('uncaughtException', err => {
   Sentry.captureException(err);
 });
@@ -19,6 +23,7 @@ export default class extends Document {
     return { ...initialProps };
   }
 
+  // Segment analytics
   renderSegmentSnippet() {
     const opts = {
       apiKey: process.env.segmentAnalyticsWriteKey,
@@ -39,13 +44,11 @@ export default class extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" />
-          <meta
-            content="initial-scale=1.0, width=device-width"
-            name="viewport"
-          />
           <link href="/semantic/semantic.min.css" rel="stylesheet" />
 
-          <script dangerouslySetInnerHTML={{ __html: this.renderSegmentSnippet() }} />
+          <script
+            dangerouslySetInnerHTML={{ __html: this.renderSegmentSnippet() }}
+          />
         </Head>
         <body>
           <Main />

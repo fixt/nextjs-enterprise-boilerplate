@@ -1,8 +1,8 @@
 import React from 'react';
-import Head from 'next/head';
 import { useAmp } from 'next/amp';
-import Layout from '../../components/Layout';
+
 import Byline from '../../components/Byline';
+import Layout from '../../components/common/Layout';
 
 export const config = {
   amp: true,
@@ -12,10 +12,7 @@ export default () => {
   const isAmp = useAmp();
 
   return (
-    <Layout>
-      <Head>
-        <title>The Cat</title>
-      </Head>
+    <Layout title="The Cat">
       <h1>The Cat (AMP-first Page)</h1>
       <Byline author="Dan Zajdband" />
       <p className="caption">Meowwwwwwww</p>

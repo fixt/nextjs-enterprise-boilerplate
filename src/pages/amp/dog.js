@@ -1,10 +1,8 @@
 import React from 'react';
-import Head from 'next/head';
 import { useAmp } from 'next/amp';
-import Byline from '../../components/Byline';
 
-import LogRocket from 'logrocket';
-LogRocket.init('ouoefb/amp');
+import Byline from '../../components/Byline';
+import Layout from '../../components/common/Layout';
 
 export const config = {
   amp: 'hybrid',
@@ -14,10 +12,7 @@ export default () => {
   const isAmp = useAmp();
 
   return (
-    <div>
-      <Head>
-        <title>The Dog</title>
-      </Head>
+    <Layout title="The Dog">
       <h1>The Dog (Hybrid AMP Page)</h1>
       <Byline author="Meow Meow Fuzzyface" />
       <p>
@@ -93,6 +88,6 @@ export default () => {
         dragée ice cream biscuit. Pie candy canes muffin candy canes ice cream
         tiramisu.
       </p>
-    </div>
+    </Layout>
   );
 };
