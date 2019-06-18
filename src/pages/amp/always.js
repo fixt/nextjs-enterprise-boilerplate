@@ -2,17 +2,13 @@ import React from 'react';
 import { useAmp } from 'next/amp';
 
 import Byline from '../../components/Byline';
-import Layout from '../../components/common/Layout';
+// import Layout from '../../components/common/Layout';
 
-export const config = {
-  amp: true,
-};
-
-export default () => {
+const AlwaysAMP = props => {
   const isAmp = useAmp();
 
   return (
-    <Layout title="The Cat">
+    <div title="The Cat">
       <h1>The Cat (AMP-first Page)</h1>
       <Byline author="Dan Zajdband" />
       <p className="caption">Meowwwwwwww</p>
@@ -199,22 +195,8 @@ export default () => {
         belly and purr when you are asleep. Lounge in doorway poop on grasses
         for lounge in doorway for chew iPad power cord.
       </p>
-      <style jsx>{`
-        h1 {
-          margin-bottom: 5px;
-        }
-        p {
-          font-size: 18px;
-          line-height: 30px;
-          margin-top: 30px;
-        }
-        .caption {
-          color: #ccc;
-          margin-top: 0;
-          font-size: 14px;
-          text-align: center;
-        }
-      `}</style>
-    </Layout>
+    </div>
   );
 };
+
+export default AlwaysAMP;

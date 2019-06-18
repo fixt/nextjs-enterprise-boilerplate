@@ -1,14 +1,15 @@
 import React from 'react';
-import { useAmp } from 'next/amp';
+import { useAmp, withAmp } from 'next/amp';
 
 import Byline from '../../components/Byline';
 import Layout from '../../components/common/Layout';
+// import AMP_Layout from '../../amp-components/common/Layout';
 
 export const config = {
   amp: 'hybrid',
 };
 
-export default () => {
+const Dog = props => {
   const isAmp = useAmp();
 
   return (
@@ -91,3 +92,5 @@ export default () => {
     </Layout>
   );
 };
+
+export default withAmp(Dog, { hybrid: true });

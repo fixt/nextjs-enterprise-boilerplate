@@ -6,8 +6,9 @@
   "scripts": {
     "build:analyze": "BUNDLE_ANALYZE=both yarn next build",
     "build:css": "cd semantic-ui && yarn gulp build",
+    "build:js": "next build",
     "build:storybook": "build-storybook",
-    "build": "next build && yarn build:css",
+    "build": "yarn build:js && yarn build:css",
     "dev:css": "cd semantic-ui && gulp watch",
     "dev": "nodemon --exec babel-node server",
     "heroku-bd": "heroku container:push web && heroku container:release web",

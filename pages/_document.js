@@ -44,8 +44,6 @@ export default class extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" />
-          <link href="/semantic/semantic.min.css" rel="stylesheet" />
-
           <script
             dangerouslySetInnerHTML={{ __html: this.renderSegmentSnippet() }}
           />
