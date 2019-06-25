@@ -8,12 +8,12 @@ import AlgoliaGridResults from '../../../components/algolia/GridResults';
 const port = parseInt(process.env.PORT, 10) || 3001;
 
 const AlgoliaMany = props => {
-  const { data } = props;
+  const { data, searchIndex } = props;
 
   return (
     <Layout title={data.pageName}>
       <Segment>
-        <AlgoliaGridResults results={data} index={searchIndex} />
+        <AlgoliaGridResults algoliaIndex={searchIndex} results={data} />
       </Segment>
     </Layout>
   );
@@ -21,10 +21,11 @@ const AlgoliaMany = props => {
 
 AlgoliaMany.getInitialProps = async ({ asPath }) => {
   const pathObj = asPath.split('/');
+  const queryParams = `searchIndex=${pathObj[1]}`;
 
   try {
     const res = await axios(
-      `http://localhost:${port}/api/algolia?searchIndex=${pathObj[1]}`
+      `http://localhost:${port}/api/algolia?${queryParams}`
     );
 
     return {

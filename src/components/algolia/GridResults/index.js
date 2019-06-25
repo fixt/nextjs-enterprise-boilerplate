@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, Grid, Card } from 'semantic-ui-react';
 
 const AlgoliaGridResults = props => {
-  const { results } = props;
+  const { algoliaIndex, results } = props;
 
   return (
     <Grid columns={6}>
@@ -12,7 +12,7 @@ const AlgoliaGridResults = props => {
             <Card
               className="basic"
               fluid
-              href={`/${results.searchPermalink}/${query.slug}`}
+              href={`/${algoliaIndex}/${query.slug}`}
               link
             >
               <Image

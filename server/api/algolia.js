@@ -25,6 +25,7 @@ router.get(
 
     let searchIndex = req.query.searchIndex;
     let lookFor = req.query.lookFor;
+    // let lookFor = req.query.lookFor;
     let pageName;
     let searchPermalink;
 

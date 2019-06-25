@@ -18,7 +18,7 @@ const routes = nextRoutes() // ----   ----      -----
 
   // Tax term
   .add('brand', '/brand/:id', 'taxonomy/term') // http://localhost:4000/brand/ethan-allen
-  .add('cast', '/cast/:id', 'taxonomy/term') // http://localhost:4000/cast/ariel
+  .add('cast', '/cast/:id', 'examples/algolia/single') // http://localhost:4000/cast/ariel
   .add('collection', '/collection/:id', 'taxonomy/term') // http://localhost:4000/cast/ariel
   .add('film', '/films/:id', 'taxonomy/term') // http://localhost:4000/film/275
   .add('sold-by', '/sold-by/:id', 'taxonomy/term') //
