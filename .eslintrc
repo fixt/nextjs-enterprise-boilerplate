@@ -1,6 +1,6 @@
 {
-  "extends": "fixt",
-  "plugins": ["jsx-a11y"],
+  "extends": ["fixt", "plugin:import/errors", "plugin:import/warnings"],
+  "plugins": ["jsx-a11y", "json", "markdown"],
   "settings": {
     "react": {
       "createClass": "createReactClass",
@@ -9,8 +9,13 @@
     }
   },
   "rules": {
-    "no-console": 0,
     "react/no-unescaped-entities": 0
-  }
+  },
+  "overrides": [{
+    "files": ["*.md"],
+    "rules": {
+      "no-console": 0,
+      "react/react-in-jsx-scope": 0
+    }
+  }]
 }
-

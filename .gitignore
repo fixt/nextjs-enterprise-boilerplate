@@ -108,6 +108,6 @@ typings/
 # Everything else
 .DS_Store
 /semantic-ui/.github
+/semantic-ui/dist
 /static/sitemaps
 package-lock.json
-/semantic-ui/dist

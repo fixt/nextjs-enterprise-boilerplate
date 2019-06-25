@@ -9,7 +9,7 @@ const TopNav = () => {
         <Menu.Menu className="menuLogo" position="left">
           <Menu.Item>
             <Link href={{ pathname: '/' }}>
-              <a>Fixt</a>
+              <a>Home</a>
             </Link>
           </Menu.Item>
         </Menu.Menu>
@@ -18,14 +18,8 @@ const TopNav = () => {
           <Menu.Menu position="left">
             <Dropdown item simple text="Dev">
               <Dropdown.Menu>
-                <Dropdown.Item
-                  content="Protocol Steps #1"
-                  href="/flows/protocols/new-request"
-                />
-                <Dropdown.Item
-                  content="Protocol Steps #2"
-                  href="/flows/protocols2/new-request"
-                />
+                <Dropdown.Item content="Step #1" href="/step-one" />
+                <Dropdown.Item content="Step #2" href="/step-two" />
                 <Dropdown.Divider />
                 <Dropdown.Item content="home" href="/" />
                 <Dropdown.Item content="about" href="/about" />

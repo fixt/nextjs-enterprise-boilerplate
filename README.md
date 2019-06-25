@@ -1,42 +1,63 @@
-# Google AMP
+# Next.js boilerplate by Fixt
 
-## How to use
+Starting a new project usually involves wasting loads of hours setting up the same boilerplate. If you're developing with [Next.js](https://github.com/zeit/next.js) we have an awesome base repo for you.
 
-### Using `create-next-app`
 
-Execute [`create-next-app`](https://github.com/segmentio/create-next-app) with [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) or [npx](https://github.com/zkat/npx#readme) to bootstrap the example:
 
-```bash
-npx create-next-app --example amp amp-app
-# or
-yarn create next-app --example amp amp-app
-```
+## What's awesome
 
-### Download manually
+- Slightly opinionated boilerplate designed for **enterprise applications** with clean code samples.
+- Integrated **authentication + authorization** support through [Auth0](https://auth0.com/docs/quickstart/spa/react/01-login).
+- **Security hardened** server that automatically finds & fixes vulnerabilities in dependencies through [Helmet](https://helmetjs.github.io/) and [Synk](https://snyk.io/).
+- **Extensive component library** through [Semantic UI](https://react.semantic-ui.com/).
+- Optionally serves **AMP** validated mobile experiences.
+- **Near-instant page loads** and **autocompleting instant search** though [Algolia](https://www.algolia.com/doc/).
+- Collect detailed **analytics and metrics** through [Segment](https://github.com/segmentio/analytics-react).
 
-Download the example:
+*Developer Experience*
 
-```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/amp
-cd amp
-```
+- **Unit Testing** with [Jest](https://jestjs.io/)/[Enzyme](https://airbnb.io/enzyme/) + [Gherkin](https://cucumber.io/docs/gherkin/) for product managers.
+- **UI Testing** with [Selenium IDE](https://www.seleniumhq.org/selenium-ide/) + BrowserStack integration.
+- **Docker**, **Heroku** ready.
+- **ES6 ready** with linting + automatic fixes for JavaScript, JSX, [JS in Markdown](https://github.com/eslint/eslint-plugin-markdown).
+- Supports **CSS, Sass or Less** with linting through [Stylelint](https://stylelint.io/).
 
-Install it and run:
+*Nextjs Customizations*
 
-```bash
-npm install
-npm run dev
-# or
-yarn
-yarn dev
-```
+- **Advanced routing ready** through the modern fork of [next-routes](https://github.com/yolk-hq/next-routes).
+- [Dotenv](https://github.com/motdotla/dotenv) support **keeps secrets out of the codebase**.
+- Webpack extensions wrapped with [next-compose](https://github.com/cyrilwanner/next-compose-plugins) for an easier to use `next.config.js`. Plugins [bundle-analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer) and [next-size](https://github.com/lucleray/next-size) help you **understand build size and composition**.
 
-Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.co/download))
 
-```bash
-now
-```
 
-## The idea behind the example
+------
 
-This example shows how to create AMP pages using Next.js and the experimental AMP feature. It shows a normal page (non-AMP), an AMP only page, and a hybrid AMP page.
+
+
+## Table of Contents
+
+[TOC]
+
+# Getting started
+
+## Repo Structure
+
+sadasdasd
+
+
+
+## NPM/Yarn commands
+
+This boilerplate uses Yarn commands internally. These can easily be swapped out with traditional `npm run`. We feel that Yarn is a little easier to use and faster at most things.
+
+Working with React*
+
+- `build:` 
+
+*Working with Semantic UI theming*
+
+- `build:` 
+
+*CI/CD Processes*
+
+- `build:` 
