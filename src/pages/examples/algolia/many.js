@@ -1,9 +1,9 @@
-import React from 'react';
 import axios from 'axios';
+import React from 'react';
 import { Segment } from 'semantic-ui-react';
 
-import Layout from '../../../components/common/Layout';
 import AlgoliaGridResults from '../../../components/algolia/GridResults';
+import Layout from '../../../components/common/Layout';
 
 const port = parseInt(process.env.PORT, 10) || 3001;
 

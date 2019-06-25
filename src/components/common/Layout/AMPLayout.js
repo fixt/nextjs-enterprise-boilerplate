@@ -1,6 +1,6 @@
-import React, { Fragment, PureComponent } from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
+import React, { Fragment, PureComponent } from 'react';
 
 class AMPLayout extends PureComponent {
   render() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Card } from 'semantic-ui-react';
+import { Card, Container, Grid } from 'semantic-ui-react';
 
 let AboutPage = props => {
   return (

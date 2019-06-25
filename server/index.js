@@ -1,15 +1,16 @@
-const bodyParser = require('body-parser');
 const cluster = require('cluster');
+const numCPUs = require('os').cpus().length;
+const url = require('url');
+
+const bodyParser = require('body-parser');
 const compression = require('compression');
 const express = require('express');
 const helmet = require('helmet');
 const nextJS = require('next');
-const numCPUs = require('os').cpus().length;
-// const redirect = require('express-redirect');
-const url = require('url');
 const hpp = require('hpp');
 const morgan = require('morgan');
 const nocache = require('nocache');
+
 require('dotenv').config();
 
 const apiRoutes = require('./api');

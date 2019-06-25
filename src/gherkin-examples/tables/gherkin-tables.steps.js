@@ -1,6 +1,7 @@
 /* eslint-env jest */
 
 import { defineFeature, loadFeature } from 'jest-cucumber';
+
 import { TodoList } from './index';
 
 const feature = loadFeature('./gherkin-tables.feature', {

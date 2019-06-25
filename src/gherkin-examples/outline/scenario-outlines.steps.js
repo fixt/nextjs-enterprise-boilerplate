@@ -1,6 +1,7 @@
 /* eslint-env jest */
 
 import { defineFeature, loadFeature } from 'jest-cucumber';
+
 import { OnlineSales } from './';
 
 const feature = loadFeature('./scenario-outlines.feature', {

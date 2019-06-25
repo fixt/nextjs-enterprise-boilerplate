@@ -1,5 +1,5 @@
-import React from 'react';
 import { useAmp } from 'next/amp';
+import React from 'react';
 
 import { Link } from '../../../../server/routes';
 

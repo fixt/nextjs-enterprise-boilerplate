@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Grid, Card } from 'semantic-ui-react';
+import { Card, Grid, Image } from 'semantic-ui-react';
 
 const AlgoliaGridResults = props => {
   const { algoliaIndex, results } = props;

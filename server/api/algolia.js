@@ -1,10 +1,9 @@
-const asyncHandler = require('express-async-handler');
+const algoliasearch = require('algoliasearch/lite');
 const express = require('express');
-const router = express.Router();
-
+const asyncHandler = require('express-async-handler');
 // const redis = require('redis');
-import algoliasearch from 'algoliasearch/lite';
-// const algoliasearch = require('algoliasearch/lite');
+
+const router = express.Router();
 
 /**
  * Algolia

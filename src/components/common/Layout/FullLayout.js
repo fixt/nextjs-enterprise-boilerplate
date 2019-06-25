@@ -1,8 +1,8 @@
-import React, { Fragment, PureComponent } from 'react';
+import * as snippet from '@segment/snippet';
 import Head from 'next/head';
 import Router from 'next/router';
 import PropTypes from 'prop-types';
-import * as snippet from '@segment/snippet';
+import React, { Fragment, PureComponent } from 'react';
 
 class FullLayout extends PureComponent {
   // Segment analytics

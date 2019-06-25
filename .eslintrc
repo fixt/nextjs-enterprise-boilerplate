@@ -1,6 +1,6 @@
 {
   "extends": ["fixt", "plugin:import/errors", "plugin:import/warnings"],
-  "plugins": ["jsx-a11y", "json", "markdown"],
+  "plugins": ["jsx-a11y", "markdown", "simple-import-sort"],
   "settings": {
     "react": {
       "createClass": "createReactClass",
@@ -9,13 +9,33 @@
     }
   },
   "rules": {
-    "react/no-unescaped-entities": 0
+    "react/no-unescaped-entities": 0,
+    "simple-import-sort/sort": "error",
+    "sort-imports": "off",
+    "prettier/prettier": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error"
   },
-  "overrides": [{
-    "files": ["*.md"],
-    "rules": {
-      "no-console": 0,
-      "react/react-in-jsx-scope": 0
+  "overrides": [
+    {
+      "files": ["*.md"],
+      "rules": {
+        "no-console": 0,
+        "react/react-in-jsx-scope": 0
+      }
+    },
+    {
+      "files": "server/**/*.js",
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "simple-import-sort/sort": "off",
+        "import/order": ["error", {
+          "newlines-between": "always"
+        }]
+      }
     }
-  }]
+  ]
 }

@@ -1,6 +1,6 @@
-import React, { memo } from 'react';
-import { Container, Menu, Dropdown } from 'semantic-ui-react';
 import Link from 'next/link';
+import React, { memo } from 'react';
+import { Container, Dropdown, Menu } from 'semantic-ui-react';
 
 const TopNav = () => {
   return (

@@ -1,6 +1,6 @@
 /* eslint-env jest */
 
-import { loadFeature, defineFeature } from 'jest-cucumber';
+import { defineFeature, loadFeature } from 'jest-cucumber';
 
 import { Rocket } from './index';
 

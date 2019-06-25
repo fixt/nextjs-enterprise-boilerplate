@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Container, Header } from 'semantic-ui-react';
+import { Container, Header, Segment } from 'semantic-ui-react';
 
 const errorMsg = ({ statusCode }) =>
   statusCode === 404 ? `Server Error (${statusCode})` : 'Browser Error';

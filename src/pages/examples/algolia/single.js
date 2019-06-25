@@ -1,5 +1,5 @@
-import React from 'react';
 import axios from 'axios';
+import React from 'react';
 import { Segment } from 'semantic-ui-react';
 
 import Layout from '../../../components/common/Layout';

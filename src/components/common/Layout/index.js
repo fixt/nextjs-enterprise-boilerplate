@@ -1,5 +1,5 @@
-import React, { memo } from 'react';
 import { useAmp } from 'next/amp';
+import React, { memo } from 'react';
 
 import AMPLayout from './AMPLayout';
 import FullLayout from './FullLayout';
