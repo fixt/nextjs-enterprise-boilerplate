@@ -3903,6 +3903,13 @@ eslint-plugin-simple-import-sort@^4.0.0:
   dependencies:
     validate-npm-package-name "^3.0.0"
 
+eslint-plugin-you-dont-need-lodash-underscore@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-you-dont-need-lodash-underscore/-/eslint-plugin-you-dont-need-lodash-underscore-6.5.0.tgz#c8893157fe477f8ccc9bf6e3e4577702f7333116"
+  integrity sha512-68bj1UlZtCLmu1Mp0GaRgIBNFJyHJChfwphY9fBk60fBkNPH/xnbEXhbFsk7CBaZGMqPkHhYjT1iICQyZAdK5Q==
+  dependencies:
+    kebab-case "^1.0.0"
+
 eslint-scope@3.7.1:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-3.7.1.tgz#3d63c3edfda02e06e01a452ad88caacc7cdcb6e8"
@@ -6385,6 +6392,11 @@ jszip@^3.1.5:
     pako "~1.0.2"
     readable-stream "~2.3.6"
     set-immediate-shim "~1.0.1"
+
+kebab-case@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/kebab-case/-/kebab-case-1.0.0.tgz#3f9e4990adcad0c686c0e701f7645868f75f91eb"
+  integrity sha1-P55JkK3K0MaGwOcB92RYaPdfkes=
 
 keyboard-key@^1.0.4:
   version "1.0.4"
