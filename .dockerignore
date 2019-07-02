@@ -1,8 +1,11 @@
-.git
-.gitignore
-.next
+.*
 build
-docker-compose.yml
-Dockerfile
+coverage
+DHQ.side
+docker-compose*
+Docker*
+documentation
+jest*
 node_modules
 README.md
+semantic-ui/node_modules

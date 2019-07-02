@@ -1,17 +1,43 @@
-FROM mhart/alpine-node:10
-MAINTAINER jeanycyang
+# Docker Multistage creates the final package in one image
+# and moves it to a leaner image without any dev dependencies;
+# a process which can cut the image size in half.
 
-RUN mkdir -p /var/www/app
-WORKDIR /var/www/app
-COPY ./package.json ./yarn.lock /var/www/app/
+# STEP 1
+# yarn install the full image
+FROM mhart/alpine-node:10 AS builder
+RUN apk update && \
+  apk add git --no-cache --virtual
+WORKDIR /app
 
-# RUN apk --update --no-cache --virtual dev-dependencies add git python make g++
-RUN yarn install --frozen-lockfile --production && yarn cache clean
+# Build Semantic UI theming
+COPY semantic-ui semantic-ui-temp
+RUN cd semantic-ui-temp && yarn install --force  --audit --non-interactive && yarn gulp build
+RUN mkdir semantic-ui && mv semantic-ui-temp/dist semantic-ui/dist && rm -rf semantic-ui-temp
 
-COPY . /var/www/app
-RUN npm run build
+# Build Next.js
+COPY package.json .
+RUN yarn install --audit --non-interactive
+COPY . . 
+RUN yarn next build
+RUN yarn --production --ignore-optional
+RUN cd node_modules/ && rm -rf postcss*
+# TODO - Figure out where postcss is coming from...
 
-# RUN apk del dev-dependencies
+# STEP 2
+# Copy over node_modules, etc from that stage to the smaller base image
+FROM mhart/alpine-node:base
+RUN apk update && \
+  apk add yarn --no-cache --virtual
+WORKDIR /app
+COPY --from=builder /app .
 
-EXPOSE 4000
-CMD ["npm", "start"]
+# STEP 3
+# Define Docker env variables & start server
+ENV PORT=3001
+ENV API_URL=https://API_URL.com
+ENV ALGOLIA_API_KEY=${ALGOLIA_API_KEY}
+EXPOSE 3001
+
+# STEP 4
+# Start docker container only when told
+CMD yarn start

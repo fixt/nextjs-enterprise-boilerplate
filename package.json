@@ -1,5 +1,5 @@
 {
-  "name": "amp",
+  "name": "nextjs-enterprise-boilerplate",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
@@ -10,23 +10,26 @@
     "build:storybook": "build-storybook",
     "build": "yarn build:js && yarn build:css",
     "dev:css": "cd semantic-ui && gulp watch",
-    "dev": "nodemon --exec babel-node server",
+    "dev": "nodemon --exec babel-node server/express",
+    "docker:build": "docker build -t nextjs-enterprise-boilerplate .",
+    "docker:run": "docker run --rm -it -p 3001:3001 -e 'PORT=3001' -e 'API_URL=https://API_URL.com' nextjs-enterprise-boilerplate",
     "heroku-bd": "heroku container:push web && heroku container:release web",
     "lint:js": "eslint . --ext .js,.md --fix",
-    "lint:styles": "stylelint 'src/**/*.scss' --fix ",
     "lint:semantic": "stylelint 'semantic-ui/src/site/**/*' --syntax less --fix",
+    "lint:styles": "stylelint 'src/**/*.scss' --fix ",
     "lint": "yarn lint:js && yarn lint:styles && yarn lint:semantic",
-    "postinstall": "cd semantic-ui && yarn install",
-    "start": "cross-env NODE_ENV=production node server",
-    "test": "jest && yarn test:selenium",
-    "test:watch": "jest --watch",
+    "start": "cross-env NODE_ENV=production node server/express",
+    "storybook": "yarn buildstorybook && start-storybook -p 6006",
     "test:coverage": "jest --coverage",
     "test:selenium": "selenium-side-runner DHQ.side -c 'browserName=chrome'",
-    "storybook": "yarn buildstorybook && start-storybook -p 6006",
-    "clean": "rm -rf yarn.lock */yarn.lock node_modules/* semantic-ui/node_modules/* semantic-ui/dist .next"
+    "test:watch": "jest --watch",
+    "test": "jest && yarn test:selenium"
   },
   "engines": {
     "node": "10.x"
+  },
+  "now": {
+    "alias": "nextjs-enterprise-boilerplate"
   },
   "dependencies": {
     "@segment/snippet": "^4.4.0",
@@ -61,12 +64,12 @@
     "@zeit/next-sass": "^1.0.1",
     "babel-jest": "^24.8.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
-    "chromedriver": "^75.0.0",
+    "chromedriver": "^75.0.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.1",
     "eslint-config-fixt": "git+https://github.com/fixt/eslint-config-fixt.git#v1.2.0",
-    "eslint-config-prettier": "^5.0.0",
+    "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-markdown": "^1.0.0",

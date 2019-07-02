@@ -20,8 +20,7 @@
     "prettier/prettier": "error",
     "import/first": "error",
     "import/newline-after-import": "error",
-    "import/no-duplicates": "error",
-    "you-dont-need-lodash-underscore": "all-warn"
+    "import/no-duplicates": "error"
   },
   "overrides": [{
       "files": ["*.md"],

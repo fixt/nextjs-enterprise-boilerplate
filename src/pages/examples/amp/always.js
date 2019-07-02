@@ -1,8 +1,8 @@
 import { useAmp } from 'next/amp';
 import React from 'react';
 
-import Byline from '../../components/Byline';
-import Layout from '../../components/common/Layout';
+import Byline from '../../../components/Byline';
+import Layout from '../../../components/common/Layout';
 
 const AlwaysAMP = props => {
   const isAmp = useAmp();

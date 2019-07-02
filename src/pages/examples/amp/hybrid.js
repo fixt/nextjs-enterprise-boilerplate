@@ -1,9 +1,9 @@
 import { useAmp, withAmp } from 'next/amp';
 import React from 'react';
 
-import Byline from '../../components/Byline';
-import CustomLink from '../../components/common/CustomLink';
-import Layout from '../../components/common/Layout';
+import Byline from '../../../components/Byline';
+import CustomLink from '../../../components/common/CustomLink';
+import Layout from '../../../components/common/Layout';
 
 export const config = {
   amp: 'hybrid',

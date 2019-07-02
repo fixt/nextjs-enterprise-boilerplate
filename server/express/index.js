@@ -81,19 +81,19 @@ if (!dev && cluster.isMaster) {
         })
       );
 
-      // Enforce SSL & HSTS in production except on Heroku & dev machines
-      if (platformHost !== 'heroku' && platformHost !== 'local') {
-        server.use((req, res, next) => {
-          const proto = req.headers['x-forwarded-proto'];
-          if (proto === 'https') {
-            res.set({
-              'Strict-Transport-Security': 'max-age=31557600', // one-year
-            });
-            return next();
-          }
-          res.redirect(`https://${req.headers.host}${req.url}`);
-        });
-      }
+      // TO-DO - Enforce SSL & HSTS in production except on Heroku & dev machines
+      // if (platformHost !== 'heroku' || platformHost !== 'local') {
+      //   server.use((req, res, next) => {
+      //     const proto = req.headers['x-forwarded-proto'];
+      //     if (proto === 'https') {
+      //       res.set({
+      //         'Strict-Transport-Security': 'max-age=31557600', // one-year
+      //       });
+      //       return next();
+      //     }
+      //     res.redirect(`https://${req.headers.host}${req.url}`);
+      //   });
+      // }
     } else {
       // Middleware to turn off caching
       server.use(nocache());
@@ -124,9 +124,6 @@ if (!dev && cluster.isMaster) {
         next();
       }
     });
-
-    // 301 redirects
-    // redirect(server);
 
     // Static files
     // https://github.com/zeit/next.js/tree/4.2.3#user-content-static-file-serving-eg-images
