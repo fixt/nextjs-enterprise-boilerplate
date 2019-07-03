@@ -1,6 +1,6 @@
 {
   "name": "nextjs-enterprise-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -28,13 +28,13 @@
   "engines": {
     "node": "10.x"
   },
-  "now": {
-    "alias": "nextjs-enterprise-boilerplate"
-  },
   "dependencies": {
     "@segment/snippet": "^4.4.0",
-    "@sentry/browser": "^5.4.0",
+    "@sentry/browser": "^5.4.3",
     "@yolkai/next-routes": "^3.0.0",
+    "@zeit/next-bundle-analyzer": "^0.1.2",
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
     "algoliasearch": "^3.33.0",
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
@@ -48,23 +48,24 @@
     "helmet": "^3.18.0",
     "hpp": "^0.2.2",
     "isomorphic-unfetch": "^3.0.0",
-    "logrocket": "^1.0.0",
+    "logrocket": "^1.0.1",
     "morgan": "^1.9.1",
-    "next": "^8.1",
+    "next": "^8.1.0",
+    "next-compose-plugins": "^2.2.0",
+    "next-images": "^1.1.2",
+    "next-size": "^2.0.2",
     "nocache": "^2.1.0",
     "path": "^0.12.7",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "semantic-ui-react": "^0.87.2",
     "url": "^0.11.0"
   },
   "devDependencies": {
     "@babel/node": "^7.4.5",
-    "@zeit/next-bundle-analyzer": "^0.1.2",
-    "@zeit/next-sass": "^1.0.1",
     "babel-jest": "^24.8.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
-    "chromedriver": "^75.0.1",
+    "chromedriver": "^75.0.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^6.0.1",
@@ -78,17 +79,14 @@
     "eslint-plugin-simple-import-sort": "^4.0.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.5.0",
     "jest": "^24.8.0",
-    "jest-cucumber": "^2.0.12",
-    "next-compose-plugins": "^2.2.0",
-    "next-images": "^1.1.2",
-    "next-size": "^2.0.2",
+    "jest-cucumber": "^2.0.11",
     "nodemon": "^1.19.1",
-    "selenium-side-runner": "^3.9.0",
-    "stylelint": "^10.0.0",
-    "stylelint-a11y": "^1.1.11",
+    "selenium-side-runner": "^3.11.0",
+    "stylelint": "^10.1.0",
+    "stylelint-a11y": "^1.2.0",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-order": "^3.0.0",
-    "stylelint-scss": "^3.6.1"
+    "stylelint-scss": "^3.8.0"
   },
   "peerDependencies": {
     "redis": "^2.8.0"

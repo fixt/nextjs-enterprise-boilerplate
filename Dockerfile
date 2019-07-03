@@ -4,9 +4,7 @@
 
 # STEP 1
 # yarn install the full image
-FROM mhart/alpine-node:10 AS builder
-RUN apk update && \
-  apk add git --no-cache --virtual
+FROM node:10 AS builder
 WORKDIR /app
 
 # Build Semantic UI theming
@@ -25,9 +23,7 @@ RUN cd node_modules/ && rm -rf postcss*
 
 # STEP 2
 # Copy over node_modules, etc from that stage to the smaller base image
-FROM mhart/alpine-node:base
-RUN apk update && \
-  apk add yarn --no-cache --virtual
+FROM node:10-alpine
 WORKDIR /app
 COPY --from=builder /app .
 
