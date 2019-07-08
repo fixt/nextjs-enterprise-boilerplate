@@ -16,10 +16,8 @@ RUN mkdir semantic-ui && mv semantic-ui-temp/dist semantic-ui/dist && rm -rf sem
 COPY package.json .
 RUN yarn install --audit --non-interactive
 COPY . . 
-RUN yarn next build
+RUN yarn next build && rm -rf node_modules
 RUN yarn --production --ignore-optional
-RUN cd node_modules/ && rm -rf postcss*
-# TODO - Figure out where postcss is coming from...
 
 # STEP 2
 # Copy over node_modules, etc from that stage to the smaller base image

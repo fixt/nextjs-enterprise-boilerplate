@@ -24,8 +24,7 @@
     "test:selenium": "selenium-side-runner DHQ.side -c 'browserName=chrome'",
     "test:watch": "jest --watch",
     "test": "jest && yarn test:selenium",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "snyk-protect": "snyk protect"
   },
   "engines": {
     "node": "10.x"
