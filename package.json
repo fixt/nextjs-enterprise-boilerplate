@@ -24,7 +24,8 @@
     "test:selenium": "selenium-side-runner DHQ.side -c 'browserName=chrome'",
     "test:watch": "jest --watch",
     "test": "jest && yarn test:selenium",
-    "snyk-protect": "snyk protect"
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": "10.x"
@@ -61,7 +62,7 @@
     "react-dom": "^16.8.6",
     "semantic-ui-react": "^0.87.2",
     "url": "^0.11.0",
-    "snyk": "^1.189.0"
+    "snyk": "^1.230.5"
   },
   "devDependencies": {
     "@babel/node": "^7.4.5",
